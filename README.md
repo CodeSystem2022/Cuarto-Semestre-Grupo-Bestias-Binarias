@@ -2,7 +2,7 @@
 En este repositorio, se agregaran las clases semana a semana de las materias Laboratorio IV y Metodologia de Sistemas
 
 
-``# **BESTIAS BINARIAS**
+**BESTIAS BINARIAS**
 
 <div align="center">
 <img src="https://i.ibb.co/hFyDT8Z/Screenshot-8.jpg" alt="Screenshot-8" border="0"></a></div>
