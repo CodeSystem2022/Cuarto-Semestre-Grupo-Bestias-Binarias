@@ -58,9 +58,8 @@ public class SistemaEstudianesApp {
                 else
                     System.out.println("Estudiante NO encontrado: " + estudiante);
             }//fin caso 2
-            case 3 -> { //Agregar Estudiante
-                System.out.println("Agregar Estudiante: ");
-                System.out.print("Nombre: ");
+ case 3 -> {// Agregar estudiante
+                System.out.println("Nombre: ");
                 var nombre = consola.nextLine();
                 System.out.println("Apellido: ");
                 var apellido = consola.nextLine();
@@ -68,20 +67,20 @@ public class SistemaEstudianesApp {
                 var telefono = consola.nextLine();
                 System.out.println("Email: ");
                 var email = consola.nextLine();
-                //crear objeto estudiante(sin id)
+                //crea el objeto estudiante sin id
                 var estudiante = new Estudiante(nombre, apellido, telefono, email);
-                var agregado = estudianteDAO.agregarEstudiante(estudiante);
+                var agregado = estudianteDao.agregarEstudiante(estudiante);
                 if (agregado)
                     System.out.println("Estudiante agregado: " + estudiante);
                 else
-                    System.out.println("Estudiante No agregado: " + estudiante);
-            }// fin caso 3
-            case 4 -> { //Modificar Estudiante
-                System.out.println("Modificar Estudiante: ");
-                //Aqui lo primero es especificar cual es el id del objeto a modificar
-                System.out.println("Id Estudiante: ");
+                    System.out.println("No se ha podido agregar estudiante: " + estudiante);
+            }// Fin caso 3
+            case 4 -> {// Modificar estudiante
+                System.out.println("Modificar estudiante...");
+                //Aqui lo primero es especificar el id del estudiante(objeto) a modificar
+                System.out.println("Ingrese el id del estudiante a modificar:");
                 var idEstudiante = Integer.parseInt(consola.nextLine());
-                System.out.print("Nombre: ");
+                System.out.println("Nombre: ");
                 var nombre = consola.nextLine();
                 System.out.println("Apellido: ");
                 var apellido = consola.nextLine();
@@ -91,32 +90,35 @@ public class SistemaEstudianesApp {
                 var email = consola.nextLine();
                 //crea el objeto estudiante a modificar
                 var estudiante = new Estudiante(idEstudiante, nombre, apellido, telefono, email);
-                var modificado = estudianteDAO.modificarEstudiante(estudiante);
+                var modificado = estudianteDao.modificarEstudiante(estudiante);
                 if (modificado)
-                    System.out.println("Estudiante Modificado: " + estudiante);
+                    System.out.println("Estudiante modificado: " + estudiante);
                 else
-                    System.out.println("Estudiante NO modificado: " + estudiante);
-            }//fin caso 4
-            case 5 -> { // Eliminar Estudiante
-                System.out.println("Eliminar Estudiante: ");
-                System.out.println("ID Estudiante: ");
+                    System.out.println("No se ha podido modificar estudiante: " + estudiante);
+            }// Fin caso 4
+            case 5 ->{// Eliminar estudiante
+                System.out.println("Eliminar estudiante...");
+                //Aqui lo primero es especificar el id del estudiante(objeto) a eliminar
+                System.out.println("Ingrese el id del estudiante a eliminar:");
                 var idEstudiante = Integer.parseInt(consola.nextLine());
+                //crea el objeto estudiante a eliminar
                 var estudiante = new Estudiante(idEstudiante);
-                var eliminado = estudianteDAO.eliminarEstudiante(estudiante);
+                var eliminado = estudianteDao.eliminarEstudiante(estudiante);
                 if (eliminado)
-                    System.out.println("Estudiante Eliminado: " + estudiante);
+                    System.out.println("Estudiante eliminado: " + estudiante);
                 else
-                    System.out.println("Estudiante NO eliminado: " + estudiante);
-            }// fin caso 5
-            case 6 -> { // salir
-                System.out.println("Hasta Pronto!!!!!! ");
+                    System.out.println("No se ha podido eliminar estudiante: " + estudiante);
+            }// Fin caso 5
+            case 6 ->{// Salir
+                System.out.println("Saliendo del sistema...");
                 salir = true;
             }// Fin caso 6
-            default -> System.out.println("Opcion no reconocida, ingrese otra opcion");
-
-        }//fin switch
+            default -> System.out.println("Opcion no valida, ingrese otra opcion");
+        }// Fin switch
         return salir;
-    }
+    } // Fin metodo ejecutarOpcion
+
+} // Fin clase Main
 }//fin clase
 
 }//Fin clase
