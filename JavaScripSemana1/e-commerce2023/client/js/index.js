@@ -8,4 +8,21 @@ productos.forEach(product) =>{
     <p>${product.price} $</p>
     `;
     shopContent.append(content);
-}
+
+    const buyBotton = document.createElement("button");
+    buyBotton.innerText = "Comprar";
+
+    content.append(buyButton);
+
+    buyBotton.addEventListener("click",()=>{
+        cart.push({
+            id: product.id,
+            productName: product.productName,
+            price: product.price,
+            quanty: product.quanty,
+            img: product.img,
+        })
+        console.log(cart)
+    })
+});
+
