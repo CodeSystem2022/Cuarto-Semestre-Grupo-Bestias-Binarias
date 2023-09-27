@@ -1,18 +1,18 @@
 
 
 class MiClase: 
-       '''
-        Este es un ejemplo de la documentación de ésta clase. 
-        Es solo para saber que aquí está MiClase
-        '''
+    '''
+    Este es un ejemplo de la documentación de ésta clase.
+    Es solo para saber que aquí está MiClase
+    '''
         
-def__init__(self):
+    def __init__(self):
         '''
         aquí esta el método dunder init 
         Éste método es el de inicio para ésta clase
         '''
         
-def mi_metodo(self, param1, param2):
+    def mi_metodo(self, param1, param2):
         '''
         Este es el método creado por mi, que recibe parámetros
         Detectó los parámetros automáticamente 
