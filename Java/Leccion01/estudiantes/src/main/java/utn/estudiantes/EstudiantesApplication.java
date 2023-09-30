@@ -53,7 +53,28 @@ public class EstudiantesApplication implements CommandLineRunner {
 				logger.info("Listando Estudiantes: "+nl);
 				List<Estudiantes2022> estudiantes = estudianteServicio.listarEstudiantes();
 				estudiantes.forEach(estudiante -> logger.info(estudiante.toString()+nl));
-			
+
+
+
+
+				
+			case 5 ->{//Eliminar estudiante
+				logger.info("Eliminar estudiante: ");
+				logger.info("Id estudiante: ");
+				var idEstudiante = Integer.parseInt(consola.nextLine());
+				//Buscamos el id estudiante a eliminar
+				var estudiante = estudianteServicio.eliminarEstudiante(idEstudiante);
+				if(estudiante != null) {
+					estudianteServicio.eliminarEstudiante(estudiante);
+					logger.info("Estudiante eliminado: "+estudiante+nl);
+				}else
+					logger.info("Estudiante NO encontrado con el id: "+estudiante+nl);
+			}//Fin caso 5
+			case 6 -> {//Salir
+				logger.info("Hasta pronto!!!");
+				salir = true;
+			}//Fin caso 6
+			default -> logger("Opción no reconocida: "+opcion+nl);
 			}//fin switch
 		return salir;
 	}
