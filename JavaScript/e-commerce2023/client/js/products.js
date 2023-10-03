@@ -4,7 +4,11 @@ const productos = [
         productName: "Banana",
         price: 480,
         quanty: 1,
+
+        img: "/client/media/banana.png",
+=======
         img: "/cleint/media/banana.png",
+
     
     },
     {
@@ -31,4 +35,3 @@ const productos = [
         img: "/client/media/mayonesa.png",
 
     },
-]:
