@@ -25,4 +25,3 @@ public class Estudiantes2022 {
     private String telefono;
     private String email;
 }
-
