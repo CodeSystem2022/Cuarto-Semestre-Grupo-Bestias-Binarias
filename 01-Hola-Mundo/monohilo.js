@@ -1,4 +1,5 @@
 
+
 console.log('Hola a toda la cohorte 2022')
 
 var i = 0;
@@ -13,4 +14,4 @@ setInterval(function() {
     //}
 
 }, 1000);
-console.log('Segunda instruccion');
+console.log('Ultima instruccion');
