@@ -1,4 +1,4 @@
-package utn.tienda_libros.vista;
+package utn.vista;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -44,10 +44,10 @@ public class LibroForm extends JFrame{
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        idTexto = new JTextField("");
+        JTextField idTexto = new JTextField("");
         idTexto.setVisible(false);
 
-        this.tablaModeloLibros = new DefaultTableModel(0, 5)
+        this.tablaModeloLibros = new DefaultTableModel(0, 5);
         String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
         this.tablaModeloLibros.setColumnIdentifiers(cabecera);
         // Intanciar el objeto JTable
