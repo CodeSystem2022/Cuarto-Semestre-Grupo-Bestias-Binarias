@@ -19,11 +19,15 @@ function adios(nombre, otroCallback){
         otroCallback();
     }, 1500);
 }
-
+// funcion recursiva
 function conversacion(nombre, veces, callback){
+    if (veces > 0){
     hablar(function(){
-        conversacion();
-    })
+        conversacion(nombre, --veces, callback);
+    });
+    }else {
+        callback(nombre, callback);
+    }
 }
 
 
