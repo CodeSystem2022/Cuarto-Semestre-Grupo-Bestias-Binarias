@@ -34,22 +34,22 @@ function conversacion(nombre, veces, callback){
 // ----Proceso Principal
 
 console.log('Iniciando el proceso...');
-hola('Ariel', adios); {
-//    adios(nombre, function() {
-//        console.log('Terminamos')
-//    });
-//});
-    //    hablar( function(){
+hola('Ariel', function (nombre) {
+    conversacion(nombre, 4, function () {
+        console.log('Terminando el proceso...');
+    });
+});
+// hola('Carlos', function(nombre) {
+//     hablar( function(){
 //        hablar( function() {
 //            hablar( function() {
 //                hablar( function() {
 //                    adios(nombre, function(){
-  //                      console.log('Terminando el proceso...');
-    //             });
-      //      });
-        //});
-    // });
-     
-    //});
-//});
+//                        console.log('Terminando el proceso...');
+//                     });
+//                 });
+//             });
+//         });
+//     });
+// });
 
