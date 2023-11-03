@@ -1,9 +1,9 @@
-package utn.tienda_libros.vista;
+package utn.vista;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import utn.tienda_libros.modelo.Libro;
-import utn.tienda_libros.servicio.LibroServicio;
+import utn.servicio.LibroServicio;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -14,7 +14,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 @Component
-public class LibroForm extends JFrame {
+public class LibroFrom extends JFrame {
     LibroServicio libroServicio;
     private JPanel panel;
     private JTable tablaLibros;
@@ -29,7 +29,7 @@ public class LibroForm extends JFrame {
     private DefaultTableModel tablaModeloLibros;
 
     @Autowired
-    public LibroForm(LibroServicio libroServicio) {
+    public LibroFrom(LibroServicio libroServicio) {
         this.libroServicio = libroServicio;
         iniciarForma();
         agregarButton.addActionListener(e -> agregarLibro());

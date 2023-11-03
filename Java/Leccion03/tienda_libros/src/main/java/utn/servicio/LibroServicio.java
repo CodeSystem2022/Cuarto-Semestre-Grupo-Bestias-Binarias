@@ -1,14 +1,15 @@
-package utn.tienda_libros.servicio;
+package utn.servicio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import utn.tienda_libros.modelo.Libro;
 import utn.tienda_libros.repositorio.LibroRepositorio;
+import utn.tienda_libros.servicio.ILibroServicio;
 
 import java.util.List;
 
 @Service
-public class LibroServicio implements ILibroServicio{
+public class LibroServicio implements ILibroServicio {
 
     @Autowired
     private LibroRepositorio libroRepositorio;
