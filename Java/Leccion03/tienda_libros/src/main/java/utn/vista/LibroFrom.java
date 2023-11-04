@@ -40,7 +40,7 @@ public class LibroFrom extends JFrame {
                 cargarLibroSeleccionado();
             }
         });
-        modificarButton.addActionListener(e -> modificarLibro());
+
         eliminarButton.addActionListener(e -> eliminarLibro());
     }
 
@@ -135,20 +135,19 @@ public class LibroFrom extends JFrame {
         if (renglon != -1) {
             String idLibro = tablaLibros.getModel().getValueAt(renglon, 0).toString();
             idTexto.setText(idLibro);
-          
+            String nombreLibro = tablaLibros.getModel().getValueAt(renglon, 1).toString();
+            libroTexto.setText(nombreLibro);
+            String autor = tablaLibros.getModel().getValueAt(renglon, 2).toString();
+            autorTexto.setText(autor);
+            String precio = tablaLibros.getModel().getValueAt(renglon, 3).toString();
+            precioTexto.setText(precio);
+            String existencias = tablaLibros.getModel().getValueAt(renglon, 4).toString();
+            existenciasTexto.setText(existencias);
         }
     }
 
     private void modificarLibro() {
-        if (this.idTexto.equals("")) {
-            mostrarMensaje("Debes seleccionar un registro en la tabla");
-        } else {
-            // Verificamos que nombre del libro no sea nulo
-            if (libroTexto.getText().equals("")) {
-                mostrarMensaje("Digite el nombre del libro");
-                libroTexto.requestFocusInWindow();
-                return;
-            }
+    
             // Llenamos el objeto libro a actualizar
             int idLibro = Integer.parseInt(idTexto.getText());
             var nombreLibro = libroTexto.getText();
