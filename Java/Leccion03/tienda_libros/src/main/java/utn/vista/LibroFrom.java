@@ -32,7 +32,7 @@ public class LibroFrom extends JFrame {
     public LibroFrom(LibroServicio libroServicio) {
         this.libroServicio = libroServicio;
         iniciarForma();
-        agregarButton.addActionListener(e -> agregarLibro());
+        
         tablaLibros.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
