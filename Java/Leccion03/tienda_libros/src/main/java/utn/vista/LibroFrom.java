@@ -40,7 +40,7 @@ public class LibroFrom extends JFrame {
                 cargarLibroSeleccionado();
             }
         });
-
+        modificarButton.addActionListener(e -> modificarLibro());
         eliminarButton.addActionListener(e -> eliminarLibro());
     }
 
@@ -147,7 +147,15 @@ public class LibroFrom extends JFrame {
     }
 
     private void modificarLibro() {
-    
+        if (this.idTexto.equals("")) {
+            mostrarMensaje("Debes seleccionar un registro en la tabla");
+        } else {
+            // Verificamos que nombre del libro no sea nulo
+            if (libroTexto.getText().equals("")) {
+                mostrarMensaje("Digite el nombre del libro");
+                libroTexto.requestFocusInWindow();
+                return;
+            }
             // Llenamos el objeto libro a actualizar
             int idLibro = Integer.parseInt(idTexto.getText());
             var nombreLibro = libroTexto.getText();
