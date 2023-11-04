@@ -9,6 +9,8 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
+
+///...
 @Component
 public class LibroFrom extends JFrame {
     LibroServicio libroServicio;
