@@ -16,6 +16,7 @@ public class LibroFrom extends JFrame {
     LibroServicio libroServicio;
     private JPanel panel;
     private JTable tablaLibros;
+    private JTextField idTexto;
     private JTextField libroTexto;
     private JTextField autoTexto;
     private JTextField precioTexto;
@@ -30,12 +31,27 @@ public class LibroFrom extends JFrame {
         this.libroServicio = libroServicio;
         iniciarForma();
 
-        agregar.addActionListener(e -> agregarLibro());
+        agregarButton.addActionListener(e -> agregarLibro());
 
-        };
+        tablaLibros.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                cargarLibroSeleccionado();
+            }
+
+        });
     }
-    private void iniciarForma(){
-    private void agregarLibro (){
+    private void iniciarForma(){...}
+    private void agregarLibro (){...}
+    private void cargarLibroSeleccionado(){
+        //Los indices de las columnas inician en 0
+        var renglon = tablaLibros.getSelectedRow();
+        if(renglon != -1){
+            String idLibro = tablaLibros.getModel().getValueAt(renglon, 0).toSting();
+    
+        }
+    }  
         if (libroTexto.getText().equals("")) {
             mostrarMensaje("Ingresa el nombre del libro");
             libroTexto.requestFocusInWindow();
@@ -82,10 +98,12 @@ public class LibroFrom extends JFrame {
     }
 
     private void createUIComponents() {
+        idTexto = new JTextField("");
+        idTexto.setVisible(false);
         this.tablaModeloLibros = new DefaultTableModel(0, 5);
         String[] cabecera = {"Id","Libro", "Autor", "Precio", "Existencias"};
         this.tablaModeloLibros.setColumnIdentifiers(cabecera);
-
+        //Instanciar el objeto de JTable
         this.tablaLibros = new JTable(tablaModeloLibros);
         listarLibros();
 
