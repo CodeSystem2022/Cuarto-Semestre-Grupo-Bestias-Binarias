@@ -15,28 +15,13 @@ function hablar(nombre) {
         }, 1000);
     });
 }
-function adios(nombre) {
-    return new Promise(function (resolve, reject) {
+function adios(nombre, otroCallback) {
     setTimeout( function() {
         console.log('Adios ' + nombre);
-        reject('Hay un error');
-    }, 1000);
-    });
+        otroCallback();
+    }, 1500);
 }
-//Llamamos a la funcion 
-console.log('Iniciando el proceso...');
-hola('Ariel')
-    .then(hablar)
-    .then(hablar)
-    .then(hablar)
-    .then(adios)
-    .then((nombre) => {
-        console.log('Terminando el proceso');
-    })
-
-    .catch(function (error) {
-        console.error('Ha habido un error:', error);
-    });
-
-    //Clase 10 completa NODE
-    
+hola ('Ariel')
+.then((nombre) =>{
+    console.log('Terminando el proceso');
+})
