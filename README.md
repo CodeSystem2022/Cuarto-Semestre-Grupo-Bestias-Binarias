@@ -36,7 +36,7 @@ En este repositorio, se agregaran las clases semana a semana de las materias Lab
 | SEMANA 6 | FERNANDO SILVA |
 | SEMANA 7 | ALBANO CALAMARA |
 | SEMANA 8 | NAHUEL TAPIA|
-| SEMANA 9 | <img src="https://venus.com.py/wp-content/uploads/2017/03/bateria-movimiento.gif" alt="bateria" width="150" height="35" >|
-| SEMANA 10 | <img src="https://venus.com.py/wp-content/uploads/2017/03/bateria-movimiento.gif" alt="bateria" width="150" height="35" >|
-| SEMANA 11 | <img src="https://venus.com.py/wp-content/uploads/2017/03/bateria-movimiento.gif" alt="bateria" width="150" height="35" >|
-| SEMANA 12 | <img src="https://venus.com.py/wp-content/uploads/2017/03/bateria-movimiento.gif" alt="bateria" width="150" height="35" >|
+| SEMANA 9 | NICOLAS MUROS |
+| SEMANA 10 | GABRIEL ROMERO |
+| SEMANA 11-12-13 | FLORENCIA ORTEGA |
+
