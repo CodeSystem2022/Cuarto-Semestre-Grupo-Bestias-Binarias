@@ -6,7 +6,6 @@
 // mostrar un mensaje en forma de error
 //console.error();
 
-
 // ejecutar un código despues de un intervalo de tiempo
 //setTimeout(()=>{});
 
@@ -18,6 +17,7 @@
 
 //console.log(global);
 //console.log(setInterval); // función
+
 
 let i = 0;
 let intervalo = setInterval(() => {
