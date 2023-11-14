@@ -35,6 +35,6 @@ setImmediate(() => {
 //require();
 
 console.log(__filename);
-
+// variables globales
 global.miVariable = `mi variable global`;
 console.log(miVariable);
