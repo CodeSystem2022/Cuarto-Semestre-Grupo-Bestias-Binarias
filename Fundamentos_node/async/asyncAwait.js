@@ -29,13 +29,6 @@
 
 
 
-
-
-
-
-
-
-
 //await solo es valido dentro de una funcion asincrona
 async function main() {
     let nombre = await hola('Ariel');
@@ -43,10 +36,10 @@ async function main() {
     await hablar();
     await hablar();
     await adios(nombre);
-    console.log('Termina le proceso...')
+    console.log('Termina el proceso...')
 }
 
-console.log('Empezamos el proceso...');
+console.log('Iniciando el proceso...');
 main();
 console.log('Esta va ser la segunda instruccion.')
 
